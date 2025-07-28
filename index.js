@@ -24,5 +24,5 @@ app.use(attendanceRoutes);
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`✅ Server running: http://localhost:${PORT}`);
+  console.log(`http://localhost:${PORT}`);
 });
