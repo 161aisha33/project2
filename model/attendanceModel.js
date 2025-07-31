@@ -1,4 +1,4 @@
-import { pool } from "../Config/db.js";
+import { pool } from "../config1/db.js";
 
 // Get all attendance records for an employee
 const getAttendanceByEmployee = async (employeeId) => {
@@ -11,11 +11,11 @@ const getAttendanceByEmployee = async (employeeId) => {
 
 // Add a new attendance record
 const addAttendance = async (record) => {
-  const { Employee_Information_ID, attendance_date, status, remarks } = record;
+  const { Employee_Information_ID, attendance_date, status } = record;
   const [result] = await pool.query(
-    `INSERT INTO attendance (Employee_Information_ID, attendance_date, status, remarks)
-     VALUES (?, ?, ?, ?)`,
-    [Employee_Information_ID, attendance_date, status, remarks]
+    `INSERT INTO attendance (Employee_Information_ID, attendance_date, status)
+    VALUES (?, ?, ?)`,
+    [Employee_Information_ID, attendance_date, status]
   );
   return result;
 };

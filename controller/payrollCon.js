@@ -1,4 +1,4 @@
-import { pool } from "../config/db.js";
+import { pool } from "../config1/db.js";
 
 export const getPayroll = async (req, res) => {
   try {

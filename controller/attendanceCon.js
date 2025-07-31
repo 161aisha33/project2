@@ -16,6 +16,8 @@ export const postAttendance = async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
+  console.log("POST Body:", req.body);
+
 };
 
 export const putAttendance = async (req, res) => {

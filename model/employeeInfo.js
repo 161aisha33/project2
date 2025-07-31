@@ -1,4 +1,4 @@
-import { pool } from "../Config/db.js"
+import { pool } from "../config1/db.js"
 
 const getEI = async () => {
     try {

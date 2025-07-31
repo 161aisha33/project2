@@ -1,5 +1,5 @@
 // backend/controller/performanceCon.js
-import { pool } from '../config/db.js';
+import { pool } from '../config1/db.js';
 
 export const getPerformanceReviews = async (req, res) => {
   try {
